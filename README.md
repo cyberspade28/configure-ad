@@ -90,11 +90,9 @@ The Domain Controller’s private IP address was set to **Static** to ensure con
 ---
 
 ### 5️⃣ Disable Windows Firewall (Testing Only)
-<p align="center">
-<img src="screenshots/firewall_disabled.png" alt="Firewall Disabled"/>
-</p>
+<img width="2560" height="1440" alt="Screenshot (42)" src="https://github.com/user-attachments/assets/855b496c-e789-4171-9760-aa68e6872967" />
+<img width="2560" height="1440" alt="Screenshot (43)" src="https://github.com/user-attachments/assets/e9af820a-0a9e-4a1a-aab3-a62acd0ae520" />
 
-The Windows Firewall was temporarily disabled to simplify connectivity testing during the lab.
 
 ---
 
@@ -103,14 +101,10 @@ The Windows Firewall was temporarily disabled to simplify connectivity testing d
 ---
 
 ### 6️⃣ Create Client VM (Client-1)
-<p align="center">
-<img src="screenshots/client1_vm.png" alt="Client VM Overview"/>
-</p>
+<img width="2560" height="1440" alt="Screenshot (44)" src="https://github.com/user-attachments/assets/12c8520f-5bba-4a80-96aa-bcd4c83c0fa7" />
 
 - **VM Name:** Client-1  
-- **OS:** Windows 10  
-- **Username:** labuser  
-- **Password:** Cyberlab123!  
+ 
 
 The client machine was deployed in the **same region and virtual network** as the Domain Controller.
 
