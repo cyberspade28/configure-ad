@@ -71,11 +71,7 @@ This lab environment will be reused for **future Active Directory labs**, such a
 <img width="2560" height="1440" alt="Screenshot (39)" src="https://github.com/user-attachments/assets/aa4b7c4e-9a02-4a2f-b189-b83adb0001d3" />
 
 <img src="screenshots/vnet_overview.png" alt="Virtual Network Overview"/>
-</p>
 
-A virtual network with a dedicated subnet was created to allow internal communication between virtual machines.
-
----
 
 ### 3️⃣ Create the Domain Controller VM (DC-1)
 <p align="center">
