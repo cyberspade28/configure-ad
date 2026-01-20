@@ -67,7 +67,9 @@ A resource group was created to logically organize all Azure resources used in t
 ---
 
 ### 2️⃣ Create a Virtual Network and Subnet
-<p align="center">
+<img width="2560" height="1440" alt="Screenshot (38)" src="https://github.com/user-attachments/assets/ed59d3be-43d0-414f-9159-0a8da3729886" />
+<img width="2560" height="1440" alt="Screenshot (39)" src="https://github.com/user-attachments/assets/aa4b7c4e-9a02-4a2f-b189-b83adb0001d3" />
+
 <img src="screenshots/vnet_overview.png" alt="Virtual Network Overview"/>
 </p>
 
