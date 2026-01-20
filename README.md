@@ -1,56 +1,187 @@
 <p align="center">
-<img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
+  <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+<h1 align="center">Deploying On-Premises Active Directory in Microsoft Azure</h1>
 
+<p align="center">
+This project demonstrates the deployment of a traditional on-premises Active Directory environment using Microsoft Azure virtual machines.
+</p>
 
-<h2>Video Demonstration</h2>
+---
 
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
+## 📌 Project Overview
 
-<h2>Environments and Technologies Used</h2>
+The goal of this lab is to simulate a **real-world enterprise Active Directory environment** by deploying a **Domain Controller** and a **Windows client machine** within Microsoft Azure.
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Active Directory Domain Services
-- PowerShell
+This project focuses on:
+- Azure Virtual Machines
+- Networking fundamentals
+- DNS configuration
+- Domain Controller infrastructure preparation
 
-<h2>Operating Systems Used </h2>
+This lab environment will be reused for **future Active Directory labs**, such as user management and Group Policy configuration.
 
+---
+
+## 🧰 Technologies Used
+
+- Microsoft Azure (Virtual Machines & Networking)
 - Windows Server 2022
-- Windows 10 (21H2)
+- Windows 10
+- Active Directory Domain Services (AD DS)
+- PowerShell
+- Remote Desktop Protocol (RDP)
 
-<h2>High-Level Deployment and Configuration Steps</h2>
+---
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+## 💻 Operating Systems
 
-<h2>Deployment and Configuration Steps</h2>
+- **Domain Controller:** Windows Server 2022
+- **Client Machine:** Windows 10 (21H2)
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+---
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+## 🏗️ High-Level Architecture
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+- One Azure Resource Group
+- One Virtual Network with a single subnet
+- One Domain Controller VM (DC-1)
+- One Client VM (Client-1)
+- Internal DNS handled by the Domain Controller
+
+---
+
+## 🚀 Deployment and Configuration Steps
+
+---
+
+### 1️⃣ Create a Resource Group
+<p align="center">
+<img src="screenshots/resource_group.png" alt="Resource Group Creation"/>
 </p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+A resource group was created to logically organize all Azure resources used in this lab.
+
+---
+
+### 2️⃣ Create a Virtual Network and Subnet
+<p align="center">
+<img src="screenshots/vnet_overview.png" alt="Virtual Network Overview"/>
 </p>
-<br />
+
+A virtual network with a dedicated subnet was created to allow internal communication between virtual machines.
+
+---
+
+### 3️⃣ Create the Domain Controller VM (DC-1)
+<p align="center">
+<img src="screenshots/dc1_vm.png" alt="Domain Controller VM"/>
+</p>
+
+- **VM Name:** DC-1  
+- **OS:** Windows Server 2022  
+- **Username:** labuser  
+- **Password:** Cyberlab123!  
+
+---
+
+### 4️⃣ Configure Static Private IP Address
+<p align="center">
+<img src="screenshots/dc1_static_ip.png" alt="Static Private IP Configuration"/>
+</p>
+
+The Domain Controller’s private IP address was set to **Static** to ensure consistent DNS functionality.
+
+---
+
+### 5️⃣ Disable Windows Firewall (Testing Only)
+<p align="center">
+<img src="screenshots/firewall_disabled.png" alt="Firewall Disabled"/>
+</p>
+
+The Windows Firewall was temporarily disabled to simplify connectivity testing during the lab.
+
+---
+
+## 🖥️ Client Machine Setup
+
+---
+
+### 6️⃣ Create Client VM (Client-1)
+<p align="center">
+<img src="screenshots/client1_vm.png" alt="Client VM Overview"/>
+</p>
+
+- **VM Name:** Client-1  
+- **OS:** Windows 10  
+- **Username:** labuser  
+- **Password:** Cyberlab123!  
+
+The client machine was deployed in the **same region and virtual network** as the Domain Controller.
+
+---
+
+### 7️⃣ Configure Client DNS Settings
+<p align="center">
+<img src="screenshots/client_dns.png" alt="Client DNS Settings"/>
+</p>
+
+Client-1’s DNS settings were configured to point to DC-1’s **private IP address**.
+
+---
+
+### 8️⃣ Verify Network Connectivity
+<p align="center">
+<img src="screenshots/ping_test.png" alt="Ping Test"/>
+</p>
+
+Connectivity between Client-1 and DC-1 was verified using ICMP ping.
+
+---
+
+### 9️⃣ Verify DNS Configuration
+<p align="center">
+<img src="screenshots/ipconfig.png" alt="DNS Verification"/>
+</p>
+
+The `ipconfig /all` command confirmed that Client-1 is using DC-1 as its DNS server.
+
+---
+
+## 💰 Cost Management
+
+<p align="center">
+<img src="screenshots/vm_stopped.png" alt="VMs Stopped"/>
+</p>
+
+When not in use, the virtual machines are **stopped (deallocated)** in the Azure Portal to reduce costs.  
+The environment was **not deleted** and will be reused for future labs.
+
+---
+
+## ✅ Skills Demonstrated
+
+- Azure Virtual Machine deployment
+- Virtual networking and subnet configuration
+- DNS configuration
+- Infrastructure planning
+- Windows Server administration fundamentals
+- Troubleshooting network connectivity
+
+---
+
+## 📌 Next Steps
+
+This lab environment will be extended to include:
+- Active Directory Domain Services installation
+- User and group management
+- Organizational Units (OUs)
+- Group Policy configuration
+
+---
+
+## 📎 Author
+
+**Shawn Smith**  
+Aspiring IT Support / Help Desk Technician  
