@@ -70,25 +70,20 @@ This lab environment will be reused for **future Active Directory labs**, such a
 <img width="2560" height="1440" alt="Screenshot (38)" src="https://github.com/user-attachments/assets/ed59d3be-43d0-414f-9159-0a8da3729886" />
 <img width="2560" height="1440" alt="Screenshot (39)" src="https://github.com/user-attachments/assets/aa4b7c4e-9a02-4a2f-b189-b83adb0001d3" />
 
-<img src="screenshots/vnet_overview.png" alt="Virtual Network Overview"/>
+
 
 
 ### 3️⃣ Create the Domain Controller VM (DC-1)
-<p align="center">
-<img src="screenshots/dc1_vm.png" alt="Domain Controller VM"/>
-</p>
+<img width="2560" height="1440" alt="Screenshot (39)" src="https://github.com/user-attachments/assets/e85fc554-5659-4066-ae62-d4bd04f5640c" />
+
 
 - **VM Name:** DC-1  
 - **OS:** Windows Server 2022  
-- **Username:** labuser  
-- **Password:** Cyberlab123!  
 
 ---
 
 ### 4️⃣ Configure Static Private IP Address
-<p align="center">
-<img src="screenshots/dc1_static_ip.png" alt="Static Private IP Configuration"/>
-</p>
+<img width="2560" height="1440" alt="Screenshot (40)" src="https://github.com/user-attachments/assets/ac03bd02-e63b-4949-8e78-0a0d04a92d0b" />
 
 The Domain Controller’s private IP address was set to **Static** to ensure consistent DNS functionality.
 
