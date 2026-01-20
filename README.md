@@ -59,10 +59,10 @@ This lab environment will be reused for **future Active Directory labs**, such a
 ### 1️⃣ Create a Resource Group
 <img width="2560" height="1440" alt="Screenshot (46)" src="https://github.com/user-attachments/assets/94c3f799-1c9d-4d2a-b6ed-2e4d58eac618" />
 
-<img src="screenshots/resource_group.png" alt="Resource Group Creation"/>
+
 </p>
 
-A resource group was created to logically organize all Azure resources used in this lab.
+
 
 ---
 
