@@ -42,7 +42,7 @@ This lab environment will be reused for **future Active Directory labs**, such a
 
 ---
 
-## objetive 
+## objective 
 
 - One Azure Resource Group
 - One Virtual Network with a single subnet
