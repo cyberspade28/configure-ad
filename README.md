@@ -10,7 +10,7 @@ This project demonstrates the deployment of a traditional on-premises Active Dir
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 The goal of this lab is to simulate a **real-world enterprise Active Directory environment** by deploying a **Domain Controller** and a **Windows client machine** within Microsoft Azure.
 
@@ -24,25 +24,25 @@ This lab environment will be reused for **future Active Directory labs**, such a
 
 ---
 
-## 🧰 Technologies Used
+##  Technologies Used
 
 - Microsoft Azure (Virtual Machines & Networking)
 - Windows Server 2022
 - Windows 10
 - Active Directory Domain Services (AD DS)
 - PowerShell
-- Remote Desktop Protocol (RDP)
+- Remote Desktop Protocol 
 
 ---
 
-## 💻 Operating Systems
+##  Operating Systems
 
 - **Domain Controller:** Windows Server 2022
-- **Client Machine:** Windows 10 (21H2)
+- **Client Machine:** Windows 10 
 
 ---
 
-## 🏗️ High-Level Architecture
+## objetive 
 
 - One Azure Resource Group
 - One Virtual Network with a single subnet
@@ -52,7 +52,7 @@ This lab environment will be reused for **future Active Directory labs**, such a
 
 ---
 
-## 🚀 Deployment and Configuration Steps
+##  Deployment and Configuration Steps
 
 ---
 
@@ -111,40 +111,25 @@ The client machine was deployed in the **same region and virtual network** as th
 ---
 
 ### 7️⃣ Configure Client DNS Settings
-<p align="center">
-<img src="screenshots/client_dns.png" alt="Client DNS Settings"/>
-</p>
-
-Client-1’s DNS settings were configured to point to DC-1’s **private IP address**.
+<img width="2560" height="1440" alt="Screenshot (47)" src="https://github.com/user-attachments/assets/026650ef-997f-42b5-bdc1-eb66b0ad0069" />
+<img width="2560" height="1440" alt="Screenshot (48)" src="https://github.com/user-attachments/assets/e68a324f-25b5-4830-a546-e38a473a1dd2" />
 
 ---
 
 ### 8️⃣ Verify Network Connectivity
-<p align="center">
-<img src="screenshots/ping_test.png" alt="Ping Test"/>
-</p>
+<img width="2560" height="1440" alt="Screenshot (55)" src="https://github.com/user-attachments/assets/8a8f9490-32cd-463b-8481-8ef9260c9959" />
+
 
 Connectivity between Client-1 and DC-1 was verified using ICMP ping.
 
 ---
 
 ### 9️⃣ Verify DNS Configuration
-<p align="center">
-<img src="screenshots/ipconfig.png" alt="DNS Verification"/>
-</p>
+<img width="2560" height="1440" alt="Screenshot (56)" src="https://github.com/user-attachments/assets/e75545ab-534b-45b2-b272-979c40e358d8" />
 
 The `ipconfig /all` command confirmed that Client-1 is using DC-1 as its DNS server.
 
----
 
-## 💰 Cost Management
-
-<p align="center">
-<img src="screenshots/vm_stopped.png" alt="VMs Stopped"/>
-</p>
-
-When not in use, the virtual machines are **stopped (deallocated)** in the Azure Portal to reduce costs.  
-The environment was **not deleted** and will be reused for future labs.
 
 ---
 
@@ -159,17 +144,3 @@ The environment was **not deleted** and will be reused for future labs.
 
 ---
 
-## 📌 Next Steps
-
-This lab environment will be extended to include:
-- Active Directory Domain Services installation
-- User and group management
-- Organizational Units (OUs)
-- Group Policy configuration
-
----
-
-## 📎 Author
-
-**Shawn Smith**  
-Aspiring IT Support / Help Desk Technician  
